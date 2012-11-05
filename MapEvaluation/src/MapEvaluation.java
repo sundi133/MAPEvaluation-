@@ -8,10 +8,10 @@ public class MapEvaluation {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stu
-
 		int kmap = 2;
 		ArrayList<String> pred = new ArrayList<String>();
 		ArrayList<String> orig = new ArrayList<String>();
+
 		orig.add("1");
 		orig.add("2");
 		orig.add("3");
@@ -24,10 +24,15 @@ public class MapEvaluation {
 		pred.add("5");
 		pred.add("4");
 		
-		double mapValue = calculateMap(pred,orig,kmap);
-		System.out.println("Map value: ---- " + mapValue);
+		System.out.println("Map value: ---- " + calculateMap(pred,orig,kmap));
 	}
 
+	/*
+	 * pass predicted  values in pred list
+	 * pass original   values in orig list
+	 * kmap map estimation at kmap: 2,5,10...
+	 * return valu is map value
+	 */
 	private static double calculateMap(ArrayList<String> pred,
 			ArrayList<String> orig,int kmap) {
 		double k=0;
